@@ -16,6 +16,7 @@ iter.next(); // { value: undefined, done: true }
 
 #### Properties
 
-##### kind `String, *optional*` - Can be "key", "value", or "key+value"; defaults to `"key+value"`. Indicates the return
+##### `kind` (String, *optional*)
+Can be "key", "value", or "key+value"; defaults to `"key+value"`. Indicates the return
 value desired, `{ value: "foo", done: false }`, `{ value: "bar", done: false }`, or `{ value: ["foo", "bar"], done: false }`
 respectively.
