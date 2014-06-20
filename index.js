@@ -45,15 +45,12 @@ module.exports = function entries(obj) {
             switch (kind) {
                 case 'key':
                     return { value: keys[current], done: false };
-                    break;
 
                 case 'value':
                     return { value: obj[keys[current]], done: false };
-                    break;
 
                 case 'key+value':
                     return { value: [ keys[current], obj[keys[current]] ], done: false };
-                    break;
 
                 default:
                     throw new TypeError('Invalid ObjectIterationKind');
