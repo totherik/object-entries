@@ -9,7 +9,7 @@ been created will not be present during iteration.
 var entries = require('object-entries');
 
 var iter;
-iter = entries({ "foo": "bar" });
+iter = entries({ 'foo': 'bar' });
 iter.next(); // { value: ['foo', 'bar'], done: false }
 iter.next(); // { value: undefined, done: true }
 ```
@@ -17,6 +17,28 @@ iter.next(); // { value: undefined, done: true }
 #### Properties
 
 ##### `kind` (String, *optional*)
-Can be "key", "value", or "key+value"; defaults to `"key+value"`. Indicates the return
-value desired, `{ value: "foo", done: false }`, `{ value: "bar", done: false }`, or `{ value: ["foo", "bar"], done: false }`
-respectively.
+Can be `'key'`, `'value'`, or `'key+value'`; defaults to `'key+value'`. Indicates the return
+value desired.
+
+```javascript
+var obj = {
+    a: '1',
+    b: '2',
+    c: '3'
+};
+
+var iter = entries(obj);
+
+// defaults to 'key+value'
+iter.next(); // { value: ['a', '1'], done: false }
+
+iter.kind = 'key';
+iter.next(); // { value: 'b', done: false }
+
+iter.kind = 'value';
+iter.next(); // { value: '3', done: false }
+
+// all done
+iter.next(); // { value: undefined, done: true }
+
+```
