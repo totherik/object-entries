@@ -1,0 +1,2 @@
+An ObjectIterator implementation.
+---

@@ -1,0 +1,31 @@
+{
+  "name": "object-entries",
+  "version": "0.0.0",
+  "description": "An ObjectIterator implementation.",
+  "main": "object-entries.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/totherik/object-entries.git"
+  },
+  "keywords": [
+    "object",
+    "iterable"
+  ],
+  "author": "Erik Toth <totherik@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/totherik/object-entries/issues"
+  },
+  "homepage": "https://github.com/totherik/object-entries",
+  "devDependencies": {
+    "istanbul": "^0.2.11",
+    "jshint": "^2.5.1",
+    "tape": "^2.13.3"
+  }
+}
