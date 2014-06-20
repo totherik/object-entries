@@ -1,4 +1,4 @@
-An ObjectIterator implementation.
+An Object Iterator implementation.
 ---
 
 Create an iterator for a given object. Note that the iterator will only use keys
